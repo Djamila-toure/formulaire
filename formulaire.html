@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Formulaire</title>
+    <link rel="stylesheet" href="formulaire.css">
+</head>
+<body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var formulaire = document.getElementById('Formulaire');
+
+    formulaire.addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêche la soumission normale du formulaire
+
+        // Récupération des valeurs des champs
+        var motDePasse = document.getElementById('motDePasse').value;
+        var nom = document.getElementById('nom').value;
+        // Récupérez les autres valeurs de formulaire ici
+
+        // Affichage des valeurs dans la console (remplacez cela par votre logique d'enregistrement)
+        console.log('Mot de passe:', motDePasse);
+        console.log('Nom:', nom);
+        // Affichez les autres valeurs de formulaire
+
+        // Affiche un message à l'utilisateur (remplacez cela par votre propre logique d'affichage de message)
+        alert('Formulaire enregistré avec succès!');
+
+        // Vous pouvez également effectuer une requête AJAX pour enregistrer les données côté serveur ici
+
+        // Réinitialisez le formulaire si nécessaire
+        formulaire.reset();
+    });
+});
+
+    </script>
+
+    <h1>Formulaire</h1>
+
+    <form action="/votre-page-de-traitement" method="post">
+        <!-- Champ de mot de passe -->
+        <label for="motDePasse">Mot de passe :</label>
+        <input type="password" id="motDePasse" name="motDePasse" required>
+        <br>
+
+        <!-- Champ de texte pour le nom -->
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+        <br>
+
+        <label for="Prenom">Prénom :</label>
+        <input type="text" id="Prenom" name="Prenom" required>
+        <br>
+
+        <label for="Age">Âge :</label>
+        <input type="text" id="Age" name="Age" required>
+        <br>
+
+        <label for="email">E-mail :</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="contact">Contact :</label>
+        <input type="tel" id="contact" name="contact" required>
+        <br>
+
+        <label>Genre :</label>
+        <input type="radio" id="homme" name="genre" value="homme">
+        <label for="homme">Homme</label>
+        <input type="radio" id="femme" name="genre" value="femme">
+        <label for="femme">Femme</label>
+        <br>
+
+        <label for="pays">Pays :</label>
+        <select id="pays" name="pays">
+            <option value="cote-ivoire">Côte d'Ivoire</option>
+            <option value="canada">Canada</option>
+            <option value="etats-unis">États-Unis</option>
+        </select>
+        <br>
+
+        <label for="Filières">Filière :</label>
+        <select id="Filières" name="Filières">
+            <option value="SRIT">SRIT</option>
+            <option value="RTEL">RTEL</option>
+            <option value="TWIN">TWIN</option>
+            <option value="SIGL">SIGL</option>
+        </select>
+        <br>
+        <label for="profession">profession</label>
+        <select name="profession" id="profession">
+            <option value="Menuisier">Menuisier</option>
+            <option value="commerçant">commerçant</option>
+            <option value="Professeur">Professeur</option>
+
+        </select>
+
+        
+
+        <label>Préférences :</label>
+        <input type="checkbox" id="musique" name="preference" value="musique">
+        <label for="musique">Musique</label>
+        <input type="checkbox" id="sport" name="preference" value="sport">
+        <label for="sport">Sport</label>
+        <br>
+
+        <label for="commentaires">Commentaires :</label>
+        <textarea id="commentaires" name="commentaires" rows="4" cols="50"></textarea>
+        <br>
+
+        <input type="submit" value="Envoyer">
+        <input type="button" value="Modifier">
+        <input type="button" value="Supprimer">
+        <input type="button" value="Éditer le compte">
+    </form>
+
+    <script src="formulaire.js"></script>
+
+</body>
+</html>
